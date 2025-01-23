@@ -2,11 +2,26 @@
 
 ## Man Pages Utilized
 
-||SYSCALLS||
-|---|
-|socket| htons | recv | sendfile
-|bind| listen | strchr | close
-|sockaddr_in| accept | open | fork
+<table>
+    <tr>
+        <td>socket</td>
+        <td>htons</td>
+        <td>recv</td>
+        <td>sendfile</td>
+    </tr>
+    <tr>
+        <td>bind</td>
+        <td>listen</td>
+        <td>strchr</td>
+        <td>close</td>
+    </tr>
+    <tr>
+        <td>sockaddr_in</td>
+        <td>accept</td>
+        <td>open</td>
+        <td>fork</td>
+    </tr>
+</table>
 
 ## Inspiration
 - [Nir Lichtman](https://www.youtube.com/@nirlichtman)
