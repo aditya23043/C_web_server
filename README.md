@@ -1,23 +1,12 @@
 # HTTP Server in C
 
-## References 
-
 ## Man Pages Utilized
 
-|Syscall|
+||SYSCALLS||
 |---|
-|socket|
-|bind|
-|sockaddr_in|
-|htons|
-|listen|
-|accept|
-|recv|
-|strchr|
-|open|
-|sendfile|
-|close|
-|fork|
+|socket| htons | recv | sendfile
+|bind| listen | strchr | close
+|sockaddr_in| accept | open | fork
 
 ## Inspiration
 - [Nir Lichtman](https://www.youtube.com/@nirlichtman)
