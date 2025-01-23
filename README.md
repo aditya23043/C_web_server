@@ -19,6 +19,6 @@
 |close|
 |fork|
 
-## Credits
+## Inspiration
 - [Nir Lichtman](https://www.youtube.com/@nirlichtman)
 - [Dr. Jonas Birch](https://www.youtube.com/@dr-Jonas-Birch)
