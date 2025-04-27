@@ -45,6 +45,7 @@ int main(int argc, char **argv) {
     perror("Listen");
     exit(-1);
   }
+  printf("Listening on port: %s...\n", argv[1]);
   // socket, backlog = number of connections that can be waiting until the
   // server starts rejecting the new connections
 
@@ -53,6 +54,7 @@ int main(int argc, char **argv) {
     perror("Client");
     exit(-1);
   }
+  printf("Client connected successfully!\n");
 
   char buffer[256] = {0};
   recv(client_fd, buffer, 256, 0);
@@ -60,7 +62,6 @@ int main(int argc, char **argv) {
   // gets the browser args from the GET /file request
   char* f_arg = buffer+5;
   *strchr(f_arg, ' ') = 0;
-  printf("%s", f_arg);
 
   int file_fd = open(f_arg, O_RDONLY);
 
@@ -72,7 +73,7 @@ int main(int argc, char **argv) {
       "Content-Length: %lu\r\n"
       "\r\n"
       "%s",
-      strlen(body), body, f_arg);
+      strlen(body), body);
 
   send(client_fd, response, strlen(response), 0);
 
