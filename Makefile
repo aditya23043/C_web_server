@@ -1,2 +1,2 @@
 build: src/main.c
-	gcc src/main.c -o bin/main
+	gcc src/main.c -o bin/server
