@@ -24,6 +24,7 @@ int main(int argc, char **argv) {
   server_add_route("/", "html/index.html");
   server_add_route("/about", "html/about.html");
   server_add_route("/style.css", "html/style.css");
+  server_add_route("/make", "Makefile");
   server_run(&http_server);
 
   return 0;

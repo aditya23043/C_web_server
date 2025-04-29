@@ -72,8 +72,8 @@ void server_run(HTTP_Server *http_server) {
             int file_served = 0;
 
             for (int i = 0; i < routes.index; i++) {
-                printf("F_ARG: %s, ROUTE: %s, FILE: %s\n", f_arg, routes.arr[i].arg, routes.arr[i].file);
                 if (strncmp(f_arg, routes.arr[i].arg, 256) == 0) {
+                    printf("F_ARG: %s, ROUTE: %s, FILE: %s\n", f_arg, routes.arr[i].arg, routes.arr[i].file);
                     int file_fd = open(routes.arr[i].file, O_RDONLY);
                     if (file_fd < 0) {
                         perror("Failed to open file");
@@ -84,10 +84,15 @@ void server_run(HTTP_Server *http_server) {
 
                         char* dot = strchr(routes.arr[i].file, '.');
 
-                        char* content_type = "text/html";
-                        if (strcmp(dot + 1, "css") == 0) {
-                            content_type = "text/css";
+                        char* content_type = "text/plain";
+                        if (dot != NULL) {
+                            if (strcmp(dot + 1, "html") == 0) {
+                                content_type = "text/html";
+                            } else if (strcmp(dot + 1, "css") == 0) {
+                                content_type = "text/css";
+                            }
                         }
+                        printf("Content Type: %s\n", content_type);
 
                         char response[256];
                         sprintf(response,
