@@ -17,8 +17,14 @@ int main(int argc, char **argv) {
     exit(-1);
   }
 
-  server_init(atoi(argv[1]));
-  server_run();
+  HTTP_Server http_server;
+  http_server.port = atoi(argv[1]);
+
+  server_init(&http_server);
+  server_add_route("/", "html/index.html");
+  server_add_route("/about", "html/about.html");
+  server_add_route("/style.css", "html/style.css");
+  server_run(&http_server);
 
   return 0;
 }

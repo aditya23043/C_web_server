@@ -1,5 +1,22 @@
 #pragma once
 
-void handle_crucial(int expr, const char *message);
-int server_init(int port);
-void server_run();
+#define MAX_ROUTES 10
+
+typedef struct HTTP_Server {
+    int socket_fd;
+    int port;
+} HTTP_Server;
+
+struct node {
+    char *arg;
+    char *file;
+};
+
+typedef struct Routes {
+    int index;
+    struct node arr[MAX_ROUTES];
+} Routes;
+
+void server_init(HTTP_Server *http_server);
+void server_run(HTTP_Server *http_server);
+void server_add_route(char *route, char *file);
