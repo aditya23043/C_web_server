@@ -20,3 +20,4 @@ typedef struct Routes {
 void server_init(HTTP_Server *http_server);
 void server_run(HTTP_Server *http_server);
 void server_add_route(char *route, char *file);
+void handle_GET(int client_fd, char *buffer);

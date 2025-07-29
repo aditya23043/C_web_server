@@ -1,8 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap");
+
 * {
-  font-family: "JetBrainsMono NFM";
+  font-family: "JetBrainsMono NFM", sans-serif;
+  font-weight: bold;
+  color: #dadada;
 }
 
-.main_title {
-  font-size: 2rem;
-  color: red;
+html {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+/* form { */
+/*   /1* margin: 2rem; *1/ */
+/*   /1* display: flex; *1/ */
+/*   /1* flex-direction: column; *1/ */
+/*   /1* justify-content: center; *1/ */
+/*   /1* align-items: center; *1/ */
+/*   /1* height: 100vh; *1/ */
+/* } */
+
+/* input { */
+/*   padding: 1rem; */
+/*   color: #dadada; */
+/*   background-color: black; */
+/*   border: 1px solid #444444; */
+/*   transition: */
+/*     border-radius 0.3s ease-in-out, */
+/*     border 0.3s ease-in-out; */
+/* } */
+
+/* input:focus { */
+/*   border: 1px solid #fff; */
+/*   outline: none; */
+/*   /1* border-radius: 0.3rem; *1/ */
+/* } */
+
+/* input[type="submit"] { */
+/*   padding: none; */
+/*   margin: 1rem; */
+/* } */
+
+input:focus {
+  outline: none;
 }

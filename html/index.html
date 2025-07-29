@@ -4,9 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-    <title>Root Page</title>
+    <title>Portfolio</title>
   </head>
   <body>
-    <div class="main_title">PROFILE</div>
+    <div
+      class="form-container flex flex-col justify-center items-center h-screen"
+    >
+      <form action="/about" method="post">
+        <div class="element">
+          <label for="name">NAME:</label><br />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name here"
+          />
+          <br />
+          <br />
+        </div>
+
+        <div class="element">
+          <label for="email">EMAIL ID:</label><br />
+          <input
+            name="email"
+            type="text"
+            id="email"
+            placeholder="Enter your email ID here"
+          />
+          <br />
+          <br />
+        </div>
+
+        <div class="element">
+          <input type="submit" id="huh" value="Submit" />
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <script -->
+    <!--   crossorigin -->
+    <!--   src="https://unpkg.com/react@18/umd/react.development.js" -->
+    <!-- ></script> -->
+    <!-- <script -->
+    <!--   crossorigin -->
+    <!--   src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" -->
+    <!-- ></script> -->
   </body>
 </html>
